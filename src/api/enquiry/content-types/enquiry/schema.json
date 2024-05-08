@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enquirys",
+  "info": {
+    "singularName": "enquiry",
+    "pluralName": "enquirys",
+    "displayName": "Enquirys",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "venue": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::venue.venue",
+      "inversedBy": "enquirys"
+    },
+    "CheckIn": {
+      "type": "datetime"
+    },
+    "CheckOut": {
+      "type": "datetime"
+    },
+    "Adults": {
+      "type": "integer"
+    },
+    "Children": {
+      "type": "integer"
+    },
+    "Pets": {
+      "type": "integer"
+    },
+    "Date": {
+      "type": "datetime"
+    }
+  }
+}
